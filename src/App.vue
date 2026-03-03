@@ -14,6 +14,7 @@
 <script setup>
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { loadLocaleMessages } from './i18n'
 import timelineData from './data'
 import SiteHeader from './components/SiteHeader.vue'
 import Hero from './components/Hero.vue'
@@ -25,7 +26,8 @@ const { locale } = useI18n()
 const lang = computed({
   get: () => locale.value,
   set: (v) => {
-    locale.value = v
+    // lazy load and switch language
+    loadLocaleMessages(v)
   }
 })
 const heroVisible = ref(true)
