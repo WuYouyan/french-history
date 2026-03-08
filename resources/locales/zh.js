@@ -20,6 +20,6 @@ export default {
     revision: {
         label: '背诵模式',
         hideTime: '隐藏时间',
-        blurCard: '模糊事件内容',
+        blurCard: '隐藏内容',
     }
 }

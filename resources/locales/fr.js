@@ -20,6 +20,6 @@ export default {
     revision: {
         label: 'Mode révision',
         hideTime: 'Masquer les dates',
-        blurCard: 'Flouter le contenu',
+        blurCard: 'Masquer le contenu',
     }
 }
